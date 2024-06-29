@@ -25,7 +25,7 @@ This project is a RESTful API for a price comparison service that aggregates pro
 1. **Clone the Repository**
 
     ```bash
-    git clone https://github.com/yourusername/price-comparison-api.git
+    git clone https://github.com/swapnil-veer/price_comparison.git
     cd price-comparison-api
     ```
 
