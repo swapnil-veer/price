@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -87,6 +88,13 @@ WSGI_APPLICATION = 'price_comparison.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+
+# Determine the environment (local or docker)
+DB_HOST = env('DB_HOST', default='localhost')
+if os.getenv('DOCKER', 'false') == 'true':
+    DB_HOST = 'db'
+
+
 # Database configuration
 DATABASES = {
     'default': {
